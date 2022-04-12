@@ -39,7 +39,7 @@ Do the following:
    HINT: no function required
 */
 
-let varOne = 'variable one';
+let varOne = 'variable two';
 const varTwo = 'variable two';
 
 if (varOne === varTwo) {
@@ -48,10 +48,6 @@ if (varOne === varTwo) {
 } else if( varOne !== varTwo) {
   console.log('These variable values are different!');
 }
-
-
-
-
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -63,6 +59,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+let stringYr = "1999"
+
+console.log(Number(stringYr));
 
 
 
@@ -76,10 +76,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  let product = a * b;
+  return product;
 }
 
+console.log(multiply(5, 7))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -92,9 +94,14 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+let age = 5
+
+function dogYears(humanAge){
+  let dogYrs = humanAge * 7;
+  return dogYrs;
 }
+
+console.log(dogYears(age));
 
 
 
@@ -143,10 +150,40 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
+let dogWeight = 7;
+let dogAge = 1;
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if (age < 1){
+    if(0.1666 < age && age < 0.3333){
+      let feed = weight * 0.1;
+      return feed;
+    } else if (0.3333 < age && age < 0.5833) {
+      let feed = weight * 0.05;
+      return feed;
+    } else if (0.5833 < age) {
+      let feed =  weight * 0.04;
+      return feed;
+    }
+  } else if (age >= 1) {
+      if(weight <= 5){
+        let feed = weight * 0.05;
+        return feed;
+      } else if (6 <= weight && weight <= 10) {
+        let feed = weight * 0.04;
+        return feed;
+      } else if (11 <= weight && weight <= 15) {
+        let feed = weight * 0.03;
+        return feed;
+      } else if (15 < weight) {
+        let feed = weight * 0.02;
+        return feed;
+      }
+      return feed;
+  }
+  return feed;
 }
+console.log(hungryDog(dogWeight, dogAge));
 
 
 
@@ -170,11 +207,32 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+let choice = ['rock', 'paper', 'scissors']
+let rand = Math.floor(Math.random()*3);
+
+let compChoi = choice[rand];
+//let compChoi = 'scissors';
+let userChoi = 'rock';
 
 function game(user, computer){
-  /*add your code here*/
-}
+  if(user === computer) {
+    return 'it\'s a tie';
+  } else if ( (user === 'rock' && computer === 'paper') || (user === 'paper' && computer === 'scissors') ||
+  (user === 'scissors' && computer === 'rock')) {
+    return 'you lose!';
+  } else if ( (computer === 'rock' && user === 'paper') || (computer === 'paper' && user === 'scissors') ||
+  (computer === 'scissors' && user === 'rock')) {
+    return 'you win!';
+  } else {
+    return 'no!';
+  }
 
+//     if(user === computer) {
+//       return 'it\'s a tie'
+//     } else if ()
+}
+console.log(compChoi);
+console.log(game(userChoi, compChoi));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -188,10 +246,14 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+let km = 14;
+
+function miles(convert){
+  let final = convert * 0.621371;
+  return final;
 }
 
+console.log(miles(km))
 
 
 //Task 5b - Feet to CM
@@ -201,11 +263,13 @@ Using the feet function below do the following:
 2. Convert the number of cm to feet
 3. Return number of feet
 */
+let numCM = 12;
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(convertToCm){
+  return convertToCm * 30.48;
 }
 
+console.log(feet(numCM));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
