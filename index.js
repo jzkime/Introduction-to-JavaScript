@@ -20,6 +20,11 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 17;
+
+if (votingAge >= 18) {
+  console.log(true)
+}
 
 
 /*
@@ -33,6 +38,16 @@ Do the following:
 
    HINT: no function required
 */
+
+let varOne = 'variable one';
+const varTwo = 'variable two';
+
+if (varOne === varTwo) {
+  varOne = 'different variable';
+  console.log(varOne);
+} else if( varOne !== varTwo) {
+  console.log('These variable values are different!');
+}
 
 
 
