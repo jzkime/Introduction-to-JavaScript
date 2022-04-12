@@ -263,10 +263,12 @@ Using the feet function below do the following:
 2. Convert the number of cm to feet
 3. Return number of feet
 */
+
 let numCM = 12;
 
 function feet(convertToCm){
-  return convertToCm * 30.48;
+  let product = convertToCm / 30.48;
+  return product;
 }
 
 console.log(feet(numCM));
@@ -286,10 +288,15 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+
+
+function annoyingSong(singS){
+  return `${singS} bottles of soda on the wall, ${singS} bottles of soda, take one down pass it around ${(singS - 1)} bottles of soda on the wall`    
 }
 
+for (let i=99; i>0; i--){
+  console.log(annoyingSong(i));
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -306,10 +313,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(gradeNum){
+  if(90 <= gradeNum && gradeNum <= 100) {
+    return 'you got an A';
+  } else if (80 <= gradeNum && gradeNum <= 89){
+    return 'you got a B';
+  } else if(70 <= gradeNum && gradeNum <= 79){
+    return 'you got a C';
+  } else if(60 <= gradeNum && gradeNum <= 69) {
+    return 'you got a D';
+  } else {
+    return 'you got an F';
+  }
 }
 
+console.log(grade(89));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
