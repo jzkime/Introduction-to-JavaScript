@@ -341,12 +341,19 @@ Using the vowelCounter function below do the following:
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
 */
-let sentence = 'This is a string, will it work? Who knows.'
+let sentence = `The loop has to be in the function, in order for there to be an array and for the loop's body to run and input array 
+conditionals into the array. Scope.`
 
 function vowelCounter(string){
-let arrayL = [];
+  
+  // string.toLowerCase() === no matter what, it will detect the vowel
+  string = string.toLowerCase();
+  let arrayL = [];
+// array inside function but outside loop === 
+// everytime the loop runs and it meets the conditionals, it will push one thing into the array.
   for(let i=0; i<string.length; i++){
     
+    // loop inside the function === the loop will push one vowel into the array outside the loop
       if(string[i] === 'a'){
         let vowA = string.split('a');
       arrayL.push(vowA);
@@ -366,6 +373,7 @@ let arrayL = [];
       
   }
   return `There are ${arrayL.length} vowels in the sentence "${sentence}"`;
+  //inside the function = one sentence
 }
 
 console.log(vowelCounter(sentence))
