@@ -341,13 +341,34 @@ Using the vowelCounter function below do the following:
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
 */
+let sentence = 'This is a string, will it work? Who knows.'
 
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string){
+let arrayL = [];
+  for(let i=0; i<string.length; i++){
+    
+      if(string[i] === 'a'){
+        let vowA = string.split('a');
+      arrayL.push(vowA);
+      } else if(string[i] ==='e'){  
+        let vowE = string.split('e');
+      arrayL.push(vowE);
+      } else if (string[i] ==='i'){
+        let vowI = string.split('i')
+      arrayL.push(vowI)
+      } else if(string[i] ==='o'){
+        let vowO = string.split('o');
+      arrayL.push(vowO);
+      } else if (string[i] ==='u'){
+        let vowU = string.split('u');
+      arrayL.push(vowU);
+      }
+      
+  }
+  return `There are ${arrayL.length} vowels in the sentence "${sentence}"`;
 }
 
-
+console.log(vowelCounter(sentence))
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
